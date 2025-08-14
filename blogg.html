@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Blog - Varshitha Gosula</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background: #fff;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ff512f;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #dd2476;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-card .content {
+            padding: 20px;
+        }
+
+        .blog-card h3 {
+            margin-bottom: 10px;
+            color: #ff512f;
+        }
+
+        .blog-card p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Travel Tips */
+        .tips {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .tips h2 {
+            color: #dd2476;
+            margin-bottom: 15px;
+        }
+
+        .tips ul {
+            list-style: none;
+        }
+
+        .tips li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tips li::before {
+            content: "✈";
+            position: absolute;
+            left: 0;
+            color: #ff512f;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .about h2 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #ff512f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Wanderlust Blog</h1>
+        <p>Exploring the World, One Place at a Time</p>
+    </header>
+
+    <nav>
+        <a href="#destinations">Destinations</a>
+        <a href="#tips">Travel Tips</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <h2 style="color:#ff512f; margin-bottom:20px;">Popular Destinations</h2>
+        <div class="blog-container">
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach">
+                <div class="content">
+                    <h3>Sunny Beaches of Maldives</h3>
+                    <p>Crystal clear waters, soft white sands, and the relaxing sound of waves – Maldives is a paradise for beach lovers.</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="Mountains">
+                <div class="content">
+                    <h3>Hiking the Alps</h3>
+                    <p>Breathtaking peaks, fresh mountain air, and scenic trails – an unforgettable adventure awaits in the Alps.</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="City">
+                <div class="content">
+                    <h3>Exploring Tokyo</h3>
+                    <p>From neon-lit streets to serene temples, Tokyo is a blend of tradition and modern marvels.</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFyaXN8ZW58MHx8MHx8fDA%3D" alt="Paris">
+                <div class="content">
+                    <h3>Romantic Paris</h3>
+                    <p>The Eiffel Tower, charming cafes, and rich culture – Paris truly is the city of love.</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Bali">
+                <div class="content">
+                    <h3>Peaceful Bali</h3>
+                    <p>Beautiful beaches, lush rice terraces, and spiritual temples make Bali a magical destination.</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="New York">
+                <div class="content">
+                    <h3>Vibrant New York</h3>
+                    <p>The city that never sleeps – skyscrapers, Broadway shows, and endless excitement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section id="tips">
+        <div class="tips">
+            <h2>Travel Tips</h2>
+            <ul>
+                <li>Always keep a copy of your important documents.</li>
+                <li>Carry a reusable water bottle to stay hydrated.</li>
+                <li>Learn basic phrases of the local language.</li>
+                <li>Travel light to make moving around easier.</li>
+                <li>Respect local customs and traditions.</li>
+                <li>Keep some emergency cash handy.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about">
+            <h2>About Varshitha Gosula</h2>
+            <p>Hi! I'm Varshitha Gosula, a passionate traveler who loves exploring new destinations and sharing my experiences through writing. I find joy in discovering hidden gems, trying local cuisines, and capturing unforgettable moments. Traveling with my family is my favorite way to create memories, and my blog is where I share these beautiful journeys with you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="tips">
+            <h2>Contact Me</h2>
+            <p>If you'd like to connect or collaborate, feel free to reach out:</p>
+            <p>📞 Phone: 6302535109</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Wanderlust Blog | Designed by Varshitha Gosula with ❤</p>
+    </footer>
+
+</body>
+</html>
